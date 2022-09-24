@@ -11,6 +11,13 @@ const Home = () => {
       >
         About
       </button>
+      <button
+        onClick={() => {
+          setPage("contact");
+        }}
+      >
+        Contact
+      </button>
     </div>
   );
 };

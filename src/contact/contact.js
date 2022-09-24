@@ -1,9 +1,9 @@
 import React from "react";
 
-const About = () => {
+const Contact = () => {
   return (
     <div>
-      <h1>This is Home Page</h1>
+      <h1>This is Contact Page</h1>
       <button
         onClick={() => {
           setPage("home");
@@ -13,13 +13,13 @@ const About = () => {
       </button>
       <button
         onClick={() => {
-          setPage("contact");
+          setPage("about");
         }}
       >
-        Contact
+        About
       </button>
     </div>
   );
 };
 
-export default About;
+export default Contact;
