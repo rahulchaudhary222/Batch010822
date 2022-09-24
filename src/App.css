@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.navBar {
+  background-color: #282c34;
+}
+.navBar span {
+  margin: 20px;
+  color: azure;
+  cursor: pointer;
+}
