@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.navBar {
+  background-color: #282c34;
+}
+.navBar span {
+  color: white;
+  margin: 20px;
+  cursor: pointer;
+}
