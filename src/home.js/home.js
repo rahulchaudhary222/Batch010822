@@ -1,6 +1,6 @@
 import React from "react";
 
-const Home = () => {
+const Home = ({ setPage }) => {
   return (
     <div>
       <h1>This is Home Page</h1>
