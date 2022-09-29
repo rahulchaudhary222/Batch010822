@@ -9,6 +9,7 @@ function App() {
   const navigate = useNavigate();
   return (
     <div className="App">
+      <h1>hey</h1>
       <div className="navBar">
         <span
           onClick={() => {
