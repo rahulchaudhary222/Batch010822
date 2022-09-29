@@ -6,10 +6,8 @@ const Home = () => {
   const [filters, setFilters] = useState(["laptop", "deodrant", "bags"]);
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [items, setItems] = useState(ITEMS);
+  const [title, setTitle] = useState(window.localStorage.getItem("savedData"));
 
-  // useEffect(() => {
-  //   console.log(selectedFilters);
-  // }, [selectedFilters]);
   useEffect(() => {
     let filtered = ITEMS.filter((el) => selectedFilters.includes(el.ctaegory));
     setItems(filtered);
@@ -26,7 +24,14 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Items</h1>
+      <h1>{title}</h1>
+      <input
+        value={title}
+        onChange={(ev) => {
+          setTitle(ev.target.value);
+          window.localStorage.setItem("savedData", ev.target.value);
+        }}
+      ></input>
       <div className="filterWrapper">
         {filters.map((el, ind) => (
           <button
