@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import ITEMS from "../../mockData";
 import "./home.css";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const [filters, setFilters] = useState(["laptop", "deodrant", "bags"]);
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [items, setItems] = useState(ITEMS);
   const [title, setTitle] = useState(window.localStorage.getItem("savedData"));
+  const COunter = useSelector((state) => state.counter.value);
 
   useEffect(() => {
     let filtered = ITEMS.filter((el) => selectedFilters.includes(el.ctaegory));
@@ -25,6 +27,7 @@ const Home = () => {
   return (
     <div>
       <h1>{title}</h1>
+      <h2>{COunter}</h2>
       <input
         value={title}
         onChange={(ev) => {
